@@ -326,6 +326,26 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
+    cluster_role = {
+      name        = substr(join("-", compact([local.prefix, "cr", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "cr", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "cr"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    cluster_role_binding = {
+      name        = substr(join("-", compact([local.prefix, "crb", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "crb", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "crb"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     cognitive_account = {
       name        = substr(join("-", compact([local.prefix, "cog", local.suffix])), 0, 64)
       name_unique = substr(join("-", compact([local.prefix, "cog", local.suffix_unique])), 0, 64)
@@ -335,6 +355,16 @@ locals {
       max_length  = 64
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]+$"
+    }
+    config_map = {
+      name        = substr(join("-", compact([local.prefix, "cm", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "cm", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "cm"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     container_group = {
       name        = substr(join("-", compact([local.prefix, "cg", local.suffix])), 0, 63)
@@ -376,6 +406,26 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-z0-9][a-z0-9-_.]+[a-z0-9]$"
     }
+    cron_job = {
+      name        = substr(join("-", compact([local.prefix, "cj", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "cj", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "cj"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    csi_driver = {
+      name        = substr(join("-", compact([local.prefix, "csi", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "csi", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "csi"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     custom_provider = {
       name        = substr(join("-", compact([local.prefix, "prov", local.suffix])), 0, 64)
       name_unique = substr(join("-", compact([local.prefix, "prov", local.suffix_unique])), 0, 64)
@@ -385,6 +435,16 @@ locals {
       max_length  = 64
       scope       = "resourceGroup"
       regex       = "^[^&%?\\/]+[^&%.?\\/ ]$"
+    }
+    daemonset = {
+      name        = substr(join("-", compact([local.prefix, "ds", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "ds", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "ds"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     dashboard = {
       name        = substr(join("-", compact([local.prefix, "dsb", local.suffix])), 0, 160)
@@ -615,6 +675,16 @@ locals {
       max_length  = 30
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9-_]+$"
+    }
+    deployment = {
+      name        = substr(join("-", compact([local.prefix, "deploy", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "deploy", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "deploy"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     dev_test_lab = {
       name        = substr(join("-", compact([local.prefix, "lab", local.suffix])), 0, 50)
@@ -1026,6 +1096,16 @@ locals {
       scope       = "global"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
+    horizontal_pod_autoscaler = {
+      name        = substr(join("-", compact([local.prefix, "hpa", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "hpa", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "hpa"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     image = {
       name        = substr(join("-", compact([local.prefix, "img", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "img", local.suffix_unique])), 0, 80)
@@ -1035,6 +1115,26 @@ locals {
       max_length  = 80
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-_.]+[a-zA-Z0-9_]$"
+    }
+    ingress = {
+      name        = substr(join("-", compact([local.prefix, "ing", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "ing", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "ing"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    ingress_class = {
+      name        = substr(join("-", compact([local.prefix, "ic", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "ic", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "ic"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     iotcentral_application = {
       name        = substr(join("-", compact([local.prefix, "iotapp", local.suffix])), 0, 63)
@@ -1085,6 +1185,16 @@ locals {
       max_length  = 64
       scope       = "parent"
       regex       = "^[a-zA-Z0-9-._]+$"
+    }
+    job = {
+      name        = substr(join("-", compact([local.prefix, "job", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "job", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "job"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     key_vault = {
       name        = substr(join("-", compact([local.prefix, "kv", local.suffix])), 0, 24)
@@ -1246,6 +1356,16 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9_]+$"
     }
+    manifest = {
+      name        = substr(join("-", compact([local.prefix, "man", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "man", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "man"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     maps_account = {
       name        = substr(join("-", compact([local.prefix, "map", local.suffix])), 0, 98)
       name_unique = substr(join("-", compact([local.prefix, "map", local.suffix_unique])), 0, 98)
@@ -1326,6 +1446,16 @@ locals {
       scope       = "global"
       regex       = "^[a-z0-9][a-z0-9-]+[a-z0-9]$"
     }
+    mssql_user = {
+      name        = substr(join("", compact([local.prefix_safe, "", local.suffix_safe])), 0, 20)
+      name_unique = substr(join("", compact([local.prefix_safe, "", local.suffix_unique_safe])), 0, 20)
+      dashes      = false
+      slug        = ""
+      min_length  = 1
+      max_length  = 20
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     mysql_database = {
       name        = substr(join("-", compact([local.prefix, "mysqldb", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "mysqldb", local.suffix_unique])), 0, 63)
@@ -1365,6 +1495,16 @@ locals {
       max_length  = 128
       scope       = "parent"
       regex       = "^[a-zA-Z0-9-_]+$"
+    }
+    namespace = {
+      name        = substr(join("-", compact([local.prefix, "ns", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "ns", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "ns"
+      min_length  = 1
+      max_length  = 63
+      scope       = "global"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     network_ddos_protection_plan = {
       name        = substr(join("-", compact([local.prefix, "ddospp", local.suffix])), 0, 80)
@@ -1455,6 +1595,36 @@ locals {
       max_length  = 50
       scope       = "global"
       regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+    }
+    persistent_volume = {
+      name        = substr(join("-", compact([local.prefix, "pv", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "pv", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "pv"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    persistent_volume_claim = {
+      name        = substr(join("-", compact([local.prefix, "pvc", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "pvc", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "pvc"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    pod = {
+      name        = substr(join("-", compact([local.prefix, "po", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "po", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "po"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     point_to_site_vpn_gateway = {
       name        = substr(join("-", compact([local.prefix, "vpngw", local.suffix])), 0, 80)
@@ -1726,6 +1896,16 @@ locals {
       scope       = "subscription"
       regex       = "^[a-zA-Z0-9-._\\(\\)]+[a-zA-Z0-9-_\\(\\)]$"
     }
+    role = {
+      name        = substr(join("-", compact([local.prefix, "role", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "role", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "role"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     role_assignment = {
       name        = substr(join("-", compact([local.prefix, "ra", local.suffix])), 0, 64)
       name_unique = substr(join("-", compact([local.prefix, "ra", local.suffix_unique])), 0, 64)
@@ -1735,6 +1915,16 @@ locals {
       max_length  = 64
       scope       = "assignment"
       regex       = "^[^%]+[^ %.]$"
+    }
+    role_binding = {
+      name        = substr(join("-", compact([local.prefix, "rb", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "rb", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "rb"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     role_definition = {
       name        = substr(join("-", compact([local.prefix, "rd", local.suffix])), 0, 64)
@@ -1765,6 +1955,36 @@ locals {
       max_length  = 80
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
+    }
+    secret = {
+      name        = substr(join("-", compact([local.prefix, "secret", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "secret", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "secret"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    service = {
+      name        = substr(join("-", compact([local.prefix, "svc", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "svc", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "svc"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
+    service_account = {
+      name        = substr(join("-", compact([local.prefix, "sa", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "sa", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "sa"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     service_fabric_cluster = {
       name        = substr(join("-", compact([local.prefix, "sf", local.suffix])), 0, 23)
@@ -1936,6 +2156,16 @@ locals {
       scope       = "global"
       regex       = "^[a-z0-9][a-z0-9-]+[a-z0-9]$"
     }
+    stateful_set = {
+      name        = substr(join("-", compact([local.prefix, "sts", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "sts", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "sts"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
+    }
     storage_account = {
       name        = substr(join("", compact([local.prefix_safe, "st", local.suffix_safe])), 0, 24)
       name_unique = substr(join("", compact([local.prefix_safe, "st", local.suffix_unique_safe])), 0, 24)
@@ -1955,6 +2185,16 @@ locals {
       max_length  = 1024
       scope       = "parent"
       regex       = "^[^\\s\\/$#&]+$"
+    }
+    storage_class = {
+      name        = substr(join("-", compact([local.prefix, "sc", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "sc", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "sc"
+      min_length  = 1
+      max_length  = 63
+      scope       = "namespace"
+      regex       = "^[a-z][a-z0-9-]+[a-z0-9]$"
     }
     storage_container = {
       name        = substr(join("-", compact([local.prefix, "stct", local.suffix])), 0, 63)
@@ -2384,9 +2624,21 @@ locals {
       valid_name        = length(regexall(local.az.cdn_profile.regex, local.az.cdn_profile.name)) > 0 && length(local.az.cdn_profile.name) > local.az.cdn_profile.min_length
       valid_name_unique = length(regexall(local.az.cdn_profile.regex, local.az.cdn_profile.name_unique)) > 0
     }
+    cluster_role = {
+      valid_name        = length(regexall(local.az.cluster_role.regex, local.az.cluster_role.name)) > 0 && length(local.az.cluster_role.name) > local.az.cluster_role.min_length
+      valid_name_unique = length(regexall(local.az.cluster_role.regex, local.az.cluster_role.name_unique)) > 0
+    }
+    cluster_role_binding = {
+      valid_name        = length(regexall(local.az.cluster_role_binding.regex, local.az.cluster_role_binding.name)) > 0 && length(local.az.cluster_role_binding.name) > local.az.cluster_role_binding.min_length
+      valid_name_unique = length(regexall(local.az.cluster_role_binding.regex, local.az.cluster_role_binding.name_unique)) > 0
+    }
     cognitive_account = {
       valid_name        = length(regexall(local.az.cognitive_account.regex, local.az.cognitive_account.name)) > 0 && length(local.az.cognitive_account.name) > local.az.cognitive_account.min_length
       valid_name_unique = length(regexall(local.az.cognitive_account.regex, local.az.cognitive_account.name_unique)) > 0
+    }
+    config_map = {
+      valid_name        = length(regexall(local.az.config_map.regex, local.az.config_map.name)) > 0 && length(local.az.config_map.name) > local.az.config_map.min_length
+      valid_name_unique = length(regexall(local.az.config_map.regex, local.az.config_map.name_unique)) > 0
     }
     container_group = {
       valid_name        = length(regexall(local.az.container_group.regex, local.az.container_group.name)) > 0 && length(local.az.container_group.name) > local.az.container_group.min_length
@@ -2404,9 +2656,21 @@ locals {
       valid_name        = length(regexall(local.az.cosmosdb_account.regex, local.az.cosmosdb_account.name)) > 0 && length(local.az.cosmosdb_account.name) > local.az.cosmosdb_account.min_length
       valid_name_unique = length(regexall(local.az.cosmosdb_account.regex, local.az.cosmosdb_account.name_unique)) > 0
     }
+    cron_job = {
+      valid_name        = length(regexall(local.az.cron_job.regex, local.az.cron_job.name)) > 0 && length(local.az.cron_job.name) > local.az.cron_job.min_length
+      valid_name_unique = length(regexall(local.az.cron_job.regex, local.az.cron_job.name_unique)) > 0
+    }
+    csi_driver = {
+      valid_name        = length(regexall(local.az.csi_driver.regex, local.az.csi_driver.name)) > 0 && length(local.az.csi_driver.name) > local.az.csi_driver.min_length
+      valid_name_unique = length(regexall(local.az.csi_driver.regex, local.az.csi_driver.name_unique)) > 0
+    }
     custom_provider = {
       valid_name        = length(regexall(local.az.custom_provider.regex, local.az.custom_provider.name)) > 0 && length(local.az.custom_provider.name) > local.az.custom_provider.min_length
       valid_name_unique = length(regexall(local.az.custom_provider.regex, local.az.custom_provider.name_unique)) > 0
+    }
+    daemonset = {
+      valid_name        = length(regexall(local.az.daemonset.regex, local.az.daemonset.name)) > 0 && length(local.az.daemonset.name) > local.az.daemonset.min_length
+      valid_name_unique = length(regexall(local.az.daemonset.regex, local.az.daemonset.name_unique)) > 0
     }
     dashboard = {
       valid_name        = length(regexall(local.az.dashboard.regex, local.az.dashboard.name)) > 0 && length(local.az.dashboard.name) > local.az.dashboard.min_length
@@ -2499,6 +2763,10 @@ locals {
     databricks_workspace = {
       valid_name        = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name)) > 0 && length(local.az.databricks_workspace.name) > local.az.databricks_workspace.min_length
       valid_name_unique = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name_unique)) > 0
+    }
+    deployment = {
+      valid_name        = length(regexall(local.az.deployment.regex, local.az.deployment.name)) > 0 && length(local.az.deployment.name) > local.az.deployment.min_length
+      valid_name_unique = length(regexall(local.az.deployment.regex, local.az.deployment.name_unique)) > 0
     }
     dev_test_lab = {
       valid_name        = length(regexall(local.az.dev_test_lab.regex, local.az.dev_test_lab.name)) > 0 && length(local.az.dev_test_lab.name) > local.az.dev_test_lab.min_length
@@ -2664,9 +2932,21 @@ locals {
       valid_name        = length(regexall(local.az.hdinsight_storm_cluster.regex, local.az.hdinsight_storm_cluster.name)) > 0 && length(local.az.hdinsight_storm_cluster.name) > local.az.hdinsight_storm_cluster.min_length
       valid_name_unique = length(regexall(local.az.hdinsight_storm_cluster.regex, local.az.hdinsight_storm_cluster.name_unique)) > 0
     }
+    horizontal_pod_autoscaler = {
+      valid_name        = length(regexall(local.az.horizontal_pod_autoscaler.regex, local.az.horizontal_pod_autoscaler.name)) > 0 && length(local.az.horizontal_pod_autoscaler.name) > local.az.horizontal_pod_autoscaler.min_length
+      valid_name_unique = length(regexall(local.az.horizontal_pod_autoscaler.regex, local.az.horizontal_pod_autoscaler.name_unique)) > 0
+    }
     image = {
       valid_name        = length(regexall(local.az.image.regex, local.az.image.name)) > 0 && length(local.az.image.name) > local.az.image.min_length
       valid_name_unique = length(regexall(local.az.image.regex, local.az.image.name_unique)) > 0
+    }
+    ingress = {
+      valid_name        = length(regexall(local.az.ingress.regex, local.az.ingress.name)) > 0 && length(local.az.ingress.name) > local.az.ingress.min_length
+      valid_name_unique = length(regexall(local.az.ingress.regex, local.az.ingress.name_unique)) > 0
+    }
+    ingress_class = {
+      valid_name        = length(regexall(local.az.ingress_class.regex, local.az.ingress_class.name)) > 0 && length(local.az.ingress_class.name) > local.az.ingress_class.min_length
+      valid_name_unique = length(regexall(local.az.ingress_class.regex, local.az.ingress_class.name_unique)) > 0
     }
     iotcentral_application = {
       valid_name        = length(regexall(local.az.iotcentral_application.regex, local.az.iotcentral_application.name)) > 0 && length(local.az.iotcentral_application.name) > local.az.iotcentral_application.min_length
@@ -2687,6 +2967,10 @@ locals {
     iothub_dps_certificate = {
       valid_name        = length(regexall(local.az.iothub_dps_certificate.regex, local.az.iothub_dps_certificate.name)) > 0 && length(local.az.iothub_dps_certificate.name) > local.az.iothub_dps_certificate.min_length
       valid_name_unique = length(regexall(local.az.iothub_dps_certificate.regex, local.az.iothub_dps_certificate.name_unique)) > 0
+    }
+    job = {
+      valid_name        = length(regexall(local.az.job.regex, local.az.job.name)) > 0 && length(local.az.job.name) > local.az.job.min_length
+      valid_name_unique = length(regexall(local.az.job.regex, local.az.job.name_unique)) > 0
     }
     key_vault = {
       valid_name        = length(regexall(local.az.key_vault.regex, local.az.key_vault.name)) > 0 && length(local.az.key_vault.name) > local.az.key_vault.min_length
@@ -2752,6 +3036,10 @@ locals {
       valid_name        = length(regexall(local.az.managed_disk.regex, local.az.managed_disk.name)) > 0 && length(local.az.managed_disk.name) > local.az.managed_disk.min_length
       valid_name_unique = length(regexall(local.az.managed_disk.regex, local.az.managed_disk.name_unique)) > 0
     }
+    manifest = {
+      valid_name        = length(regexall(local.az.manifest.regex, local.az.manifest.name)) > 0 && length(local.az.manifest.name) > local.az.manifest.min_length
+      valid_name_unique = length(regexall(local.az.manifest.regex, local.az.manifest.name_unique)) > 0
+    }
     maps_account = {
       valid_name        = length(regexall(local.az.maps_account.regex, local.az.maps_account.name)) > 0 && length(local.az.maps_account.name) > local.az.maps_account.min_length
       valid_name_unique = length(regexall(local.az.maps_account.regex, local.az.maps_account.name_unique)) > 0
@@ -2784,6 +3072,10 @@ locals {
       valid_name        = length(regexall(local.az.mssql_server.regex, local.az.mssql_server.name)) > 0 && length(local.az.mssql_server.name) > local.az.mssql_server.min_length
       valid_name_unique = length(regexall(local.az.mssql_server.regex, local.az.mssql_server.name_unique)) > 0
     }
+    mssql_user = {
+      valid_name        = length(regexall(local.az.mssql_user.regex, local.az.mssql_user.name)) > 0 && length(local.az.mssql_user.name) > local.az.mssql_user.min_length
+      valid_name_unique = length(regexall(local.az.mssql_user.regex, local.az.mssql_user.name_unique)) > 0
+    }
     mysql_database = {
       valid_name        = length(regexall(local.az.mysql_database.regex, local.az.mysql_database.name)) > 0 && length(local.az.mysql_database.name) > local.az.mysql_database.min_length
       valid_name_unique = length(regexall(local.az.mysql_database.regex, local.az.mysql_database.name_unique)) > 0
@@ -2799,6 +3091,10 @@ locals {
     mysql_virtual_network_rule = {
       valid_name        = length(regexall(local.az.mysql_virtual_network_rule.regex, local.az.mysql_virtual_network_rule.name)) > 0 && length(local.az.mysql_virtual_network_rule.name) > local.az.mysql_virtual_network_rule.min_length
       valid_name_unique = length(regexall(local.az.mysql_virtual_network_rule.regex, local.az.mysql_virtual_network_rule.name_unique)) > 0
+    }
+    namespace = {
+      valid_name        = length(regexall(local.az.namespace.regex, local.az.namespace.name)) > 0 && length(local.az.namespace.name) > local.az.namespace.min_length
+      valid_name_unique = length(regexall(local.az.namespace.regex, local.az.namespace.name_unique)) > 0
     }
     network_ddos_protection_plan = {
       valid_name        = length(regexall(local.az.network_ddos_protection_plan.regex, local.az.network_ddos_protection_plan.name)) > 0 && length(local.az.network_ddos_protection_plan.name) > local.az.network_ddos_protection_plan.min_length
@@ -2835,6 +3131,18 @@ locals {
     notification_hub_namespace = {
       valid_name        = length(regexall(local.az.notification_hub_namespace.regex, local.az.notification_hub_namespace.name)) > 0 && length(local.az.notification_hub_namespace.name) > local.az.notification_hub_namespace.min_length
       valid_name_unique = length(regexall(local.az.notification_hub_namespace.regex, local.az.notification_hub_namespace.name_unique)) > 0
+    }
+    persistent_volume = {
+      valid_name        = length(regexall(local.az.persistent_volume.regex, local.az.persistent_volume.name)) > 0 && length(local.az.persistent_volume.name) > local.az.persistent_volume.min_length
+      valid_name_unique = length(regexall(local.az.persistent_volume.regex, local.az.persistent_volume.name_unique)) > 0
+    }
+    persistent_volume_claim = {
+      valid_name        = length(regexall(local.az.persistent_volume_claim.regex, local.az.persistent_volume_claim.name)) > 0 && length(local.az.persistent_volume_claim.name) > local.az.persistent_volume_claim.min_length
+      valid_name_unique = length(regexall(local.az.persistent_volume_claim.regex, local.az.persistent_volume_claim.name_unique)) > 0
+    }
+    pod = {
+      valid_name        = length(regexall(local.az.pod.regex, local.az.pod.name)) > 0 && length(local.az.pod.name) > local.az.pod.min_length
+      valid_name_unique = length(regexall(local.az.pod.regex, local.az.pod.name_unique)) > 0
     }
     point_to_site_vpn_gateway = {
       valid_name        = length(regexall(local.az.point_to_site_vpn_gateway.regex, local.az.point_to_site_vpn_gateway.name)) > 0 && length(local.az.point_to_site_vpn_gateway.name) > local.az.point_to_site_vpn_gateway.min_length
@@ -2944,9 +3252,17 @@ locals {
       valid_name        = length(regexall(local.az.resource_group.regex, local.az.resource_group.name)) > 0 && length(local.az.resource_group.name) > local.az.resource_group.min_length
       valid_name_unique = length(regexall(local.az.resource_group.regex, local.az.resource_group.name_unique)) > 0
     }
+    role = {
+      valid_name        = length(regexall(local.az.role.regex, local.az.role.name)) > 0 && length(local.az.role.name) > local.az.role.min_length
+      valid_name_unique = length(regexall(local.az.role.regex, local.az.role.name_unique)) > 0
+    }
     role_assignment = {
       valid_name        = length(regexall(local.az.role_assignment.regex, local.az.role_assignment.name)) > 0 && length(local.az.role_assignment.name) > local.az.role_assignment.min_length
       valid_name_unique = length(regexall(local.az.role_assignment.regex, local.az.role_assignment.name_unique)) > 0
+    }
+    role_binding = {
+      valid_name        = length(regexall(local.az.role_binding.regex, local.az.role_binding.name)) > 0 && length(local.az.role_binding.name) > local.az.role_binding.min_length
+      valid_name_unique = length(regexall(local.az.role_binding.regex, local.az.role_binding.name_unique)) > 0
     }
     role_definition = {
       valid_name        = length(regexall(local.az.role_definition.regex, local.az.role_definition.name)) > 0 && length(local.az.role_definition.name) > local.az.role_definition.min_length
@@ -2959,6 +3275,18 @@ locals {
     route_table = {
       valid_name        = length(regexall(local.az.route_table.regex, local.az.route_table.name)) > 0 && length(local.az.route_table.name) > local.az.route_table.min_length
       valid_name_unique = length(regexall(local.az.route_table.regex, local.az.route_table.name_unique)) > 0
+    }
+    secret = {
+      valid_name        = length(regexall(local.az.secret.regex, local.az.secret.name)) > 0 && length(local.az.secret.name) > local.az.secret.min_length
+      valid_name_unique = length(regexall(local.az.secret.regex, local.az.secret.name_unique)) > 0
+    }
+    service = {
+      valid_name        = length(regexall(local.az.service.regex, local.az.service.name)) > 0 && length(local.az.service.name) > local.az.service.min_length
+      valid_name_unique = length(regexall(local.az.service.regex, local.az.service.name_unique)) > 0
+    }
+    service_account = {
+      valid_name        = length(regexall(local.az.service_account.regex, local.az.service_account.name)) > 0 && length(local.az.service_account.name) > local.az.service_account.min_length
+      valid_name_unique = length(regexall(local.az.service_account.regex, local.az.service_account.name_unique)) > 0
     }
     service_fabric_cluster = {
       valid_name        = length(regexall(local.az.service_fabric_cluster.regex, local.az.service_fabric_cluster.name)) > 0 && length(local.az.service_fabric_cluster.name) > local.az.service_fabric_cluster.min_length
@@ -3028,6 +3356,10 @@ locals {
       valid_name        = length(regexall(local.az.sql_server.regex, local.az.sql_server.name)) > 0 && length(local.az.sql_server.name) > local.az.sql_server.min_length
       valid_name_unique = length(regexall(local.az.sql_server.regex, local.az.sql_server.name_unique)) > 0
     }
+    stateful_set = {
+      valid_name        = length(regexall(local.az.stateful_set.regex, local.az.stateful_set.name)) > 0 && length(local.az.stateful_set.name) > local.az.stateful_set.min_length
+      valid_name_unique = length(regexall(local.az.stateful_set.regex, local.az.stateful_set.name_unique)) > 0
+    }
     storage_account = {
       valid_name        = length(regexall(local.az.storage_account.regex, local.az.storage_account.name)) > 0 && length(local.az.storage_account.name) > local.az.storage_account.min_length
       valid_name_unique = length(regexall(local.az.storage_account.regex, local.az.storage_account.name_unique)) > 0
@@ -3035,6 +3367,10 @@ locals {
     storage_blob = {
       valid_name        = length(regexall(local.az.storage_blob.regex, local.az.storage_blob.name)) > 0 && length(local.az.storage_blob.name) > local.az.storage_blob.min_length
       valid_name_unique = length(regexall(local.az.storage_blob.regex, local.az.storage_blob.name_unique)) > 0
+    }
+    storage_class = {
+      valid_name        = length(regexall(local.az.storage_class.regex, local.az.storage_class.name)) > 0 && length(local.az.storage_class.name) > local.az.storage_class.min_length
+      valid_name_unique = length(regexall(local.az.storage_class.regex, local.az.storage_class.name_unique)) > 0
     }
     storage_container = {
       valid_name        = length(regexall(local.az.storage_container.regex, local.az.storage_container.name)) > 0 && length(local.az.storage_container.name) > local.az.storage_container.min_length

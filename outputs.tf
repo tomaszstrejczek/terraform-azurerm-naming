@@ -122,8 +122,20 @@ output "cdn_profile" {
   value = local.az.cdn_profile
 }
 
+output "cluster_role" {
+  value = local.az.cluster_role
+}
+
+output "cluster_role_binding" {
+  value = local.az.cluster_role_binding
+}
+
 output "cognitive_account" {
   value = local.az.cognitive_account
+}
+
+output "config_map" {
+  value = local.az.config_map
 }
 
 output "container_group" {
@@ -142,8 +154,20 @@ output "cosmosdb_account" {
   value = local.az.cosmosdb_account
 }
 
+output "cron_job" {
+  value = local.az.cron_job
+}
+
+output "csi_driver" {
+  value = local.az.csi_driver
+}
+
 output "custom_provider" {
   value = local.az.custom_provider
+}
+
+output "daemonset" {
+  value = local.az.daemonset
 }
 
 output "dashboard" {
@@ -236,6 +260,10 @@ output "databricks_standard_cluster" {
 
 output "databricks_workspace" {
   value = local.az.databricks_workspace
+}
+
+output "deployment" {
+  value = local.az.deployment
 }
 
 output "dev_test_lab" {
@@ -402,8 +430,20 @@ output "hdinsight_storm_cluster" {
   value = local.az.hdinsight_storm_cluster
 }
 
+output "horizontal_pod_autoscaler" {
+  value = local.az.horizontal_pod_autoscaler
+}
+
 output "image" {
   value = local.az.image
+}
+
+output "ingress" {
+  value = local.az.ingress
+}
+
+output "ingress_class" {
+  value = local.az.ingress_class
 }
 
 output "iotcentral_application" {
@@ -424,6 +464,10 @@ output "iothub_dps" {
 
 output "iothub_dps_certificate" {
   value = local.az.iothub_dps_certificate
+}
+
+output "job" {
+  value = local.az.job
 }
 
 output "key_vault" {
@@ -490,6 +534,10 @@ output "managed_disk" {
   value = local.az.managed_disk
 }
 
+output "manifest" {
+  value = local.az.manifest
+}
+
 output "maps_account" {
   value = local.az.maps_account
 }
@@ -522,6 +570,10 @@ output "mssql_server" {
   value = local.az.mssql_server
 }
 
+output "mssql_user" {
+  value = local.az.mssql_user
+}
+
 output "mysql_database" {
   value = local.az.mysql_database
 }
@@ -536,6 +588,10 @@ output "mysql_server" {
 
 output "mysql_virtual_network_rule" {
   value = local.az.mysql_virtual_network_rule
+}
+
+output "namespace" {
+  value = local.az.namespace
 }
 
 output "network_ddos_protection_plan" {
@@ -572,6 +628,18 @@ output "notification_hub_authorization_rule" {
 
 output "notification_hub_namespace" {
   value = local.az.notification_hub_namespace
+}
+
+output "persistent_volume" {
+  value = local.az.persistent_volume
+}
+
+output "persistent_volume_claim" {
+  value = local.az.persistent_volume_claim
+}
+
+output "pod" {
+  value = local.az.pod
 }
 
 output "point_to_site_vpn_gateway" {
@@ -682,8 +750,16 @@ output "resource_group" {
   value = local.az.resource_group
 }
 
+output "role" {
+  value = local.az.role
+}
+
 output "role_assignment" {
   value = local.az.role_assignment
+}
+
+output "role_binding" {
+  value = local.az.role_binding
 }
 
 output "role_definition" {
@@ -696,6 +772,18 @@ output "route" {
 
 output "route_table" {
   value = local.az.route_table
+}
+
+output "secret" {
+  value = local.az.secret
+}
+
+output "service" {
+  value = local.az.service
+}
+
+output "service_account" {
+  value = local.az.service_account
 }
 
 output "service_fabric_cluster" {
@@ -766,12 +854,20 @@ output "sql_server" {
   value = local.az.sql_server
 }
 
+output "stateful_set" {
+  value = local.az.stateful_set
+}
+
 output "storage_account" {
   value = local.az.storage_account
 }
 
 output "storage_blob" {
   value = local.az.storage_blob
+}
+
+output "storage_class" {
+  value = local.az.storage_class
 }
 
 output "storage_container" {

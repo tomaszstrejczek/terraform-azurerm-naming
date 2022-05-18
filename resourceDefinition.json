@@ -2121,5 +2121,269 @@
     "scope": "resourceGroup",
     "slug": "vmss",
     "dashes": true
+  },
+  {
+    "name": "daemonset",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "ds",
+    "dashes": true
+  },
+  {
+    "name": "deployment",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "deploy",
+    "dashes": true
+  },
+  {
+    "name": "stateful_set",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "sts",
+    "dashes": true
+  },
+  {
+    "name": "horizontal_pod_autoscaler",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "hpa",
+    "dashes": true
+  },
+  {
+    "name": "cron_job",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "cj",
+    "dashes": true
+  },
+  {
+    "name": "job",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "job",
+    "dashes": true
+  },
+  {
+    "name": "config_map",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "cm",
+    "dashes": true
+  },
+  {
+    "name": "namespace",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "global",
+    "slug": "ns",
+    "dashes": true
+  },
+  {
+    "name": "persistent_volume",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "pv",
+    "dashes": true
+  },
+  {
+    "name": "persistent_volume_claim",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "pvc",
+    "dashes": true
+  },
+  {
+    "name": "pod",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "po",
+    "dashes": true
+  },
+  {
+    "name": "secret",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "secret",
+    "dashes": true
+  },
+  {
+    "name": "service",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "svc",
+    "dashes": true
+  },
+  {
+    "name": "service_account",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "sa",
+    "dashes": true
+  },
+  {
+    "name": "ingress",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "ing",
+    "dashes": true
+  },
+  {
+    "name": "manifest",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "man",
+    "dashes": true
+  },
+  {
+    "name": "ingress_class",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "ic",
+    "dashes": true
+  },
+  {
+    "name": "cluster_role",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "cr",
+    "dashes": true
+  },
+  {
+    "name": "cluster_role_binding",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "crb",
+    "dashes": true
+  },
+  {
+    "name": "role",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "role",
+    "dashes": true
+  },
+  {
+    "name": "role_binding",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "rb",
+    "dashes": true
+  },
+  {
+    "name": "storage_class",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "sc",
+    "dashes": true
+  },
+  {
+    "name": "csi_driver",
+    "length": {
+      "min": 1,
+      "max": 63
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "csi",
+    "dashes": true
+  },
+  {
+    "name": "mssql_user",
+    "length": {
+      "min": 1,
+      "max": 20
+    },
+    "regex": "^(?=.{1,63}$)[a-z][a-z0-9-]+[a-z0-9]$",
+    "scope": "namespace",
+    "slug": "",
+    "dashes": false
   }
 ]
